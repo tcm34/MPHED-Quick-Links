@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MPHED Quick Links</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #FFFFFF;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h2 {
+      color: #02787C;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background-color: #02787C;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+      background-color: #01585B;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      max-width: 500px;
+    }
+
+    .description {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>MPHED Quick Links</h2>
+    <button id="openLinksBtn">Open All Links</button>
+    <p class="description">
+      Click this button to open all of the web pages<br>
+      required during a shift in the emergency department.
+    </p>
+  </div>
+
+  <script>
+    document.getElementById('openLinksBtn').addEventListener('click', () => {
+      const urls = [
+        "https://epr.tst.nhs.uk/MAXIMS_PROD/",
+        "https://patientrack.tst.nhs.uk/",
+        "https://ice.somersetft.nhs.uk/icedesktop/dotnet/icedesktop/login.aspx",
+        "https://eprportal.tst.nhs.uk/",
+        "https://epro.tst.nhs.uk/mobile?pageMode=normal",
+        "https://ordercomms.tst.nhs.uk/Review/login.aspx",
+        "https://vuepacs.somersetft.nhs.uk/Portal/Login.aspx?ReturnUrl=/Portal",
+        "https://somersetft.sharepoint.com/sites/MPHEDOnline/"
+      ];
+
+      urls.forEach(url => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      });
+    });
+  </script>
+</body>
+</html>
